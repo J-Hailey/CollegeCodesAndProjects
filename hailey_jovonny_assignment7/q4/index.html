@@ -1,0 +1,66 @@
+<!--    
+CSCI 3300
+Section 07
+12/2/19-->
+	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jovonny's Point of Sale System</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+    var totalPrice=0;
+    var lists = "<ul>";
+
+    function getResults(){
+    var quantity = parseFloat(document.lab.quantity.value);
+    var productCode = parseFloat(document.lab.product.value);
+    var prices = [27.50, 160.23, 32.99]
+    var products = ["Winter Hat" , "Warm Coat" , "Gloves"];
+    var product = products[productCode - 1];
+    var price = prices[productCode - 1]* quantity;
+      totalPrice += price;
+        lists += "<li>" + product + " (Quantity "+ quantity +") Cost: "+ price.toFixed(2) + "</li>";
+          document.getElementById("result").innerHTML = lists + "<ul> Total Price: $" + totalPrice.toFixed(2);
+    }
+    </script>
+</head>
+
+<body>
+
+  <header>
+	<div id="sidebar"><h1>Jovonny's Point of Sale System</h1></div>
+  </header>
+
+
+<p> This is a point of sale program for a store selling winter cloths. </p>
+
+<ul> 
+	<li> Product Code 1. A Winter hat cost $27.50. </li>
+	<li> Product Code 2. A Warm Coat cost $160.23. </li>
+	<li> Product Code 3. A pair of gloves cost $32.99. </li>
+</ul>
+
+<form name="lab" action= "javascript:getResults()">
+<table>
+<tr>
+<td>Enter the Product Code:</td><td><input type="text" name ="product"></td>
+</tr>
+<tr>
+<td>Enter the Quantity:</td><td><input type="text" name ="quantity"></td>
+</tr>
+</table><br><br>
+<div id="resultsArea">
+		<input type="submit" value ="Add this item to the purchase order."><br><br>
+</div>
+</form>
+
+<div id="result">(Incomplete Information)</div>
+
+<footer>&copy; 2019 Jovonny Hailey</footer>
+</body>
+</html>
+
+

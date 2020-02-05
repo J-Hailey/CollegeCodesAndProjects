@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Jovonny Hailey
+     CSCI 3300
+     11/30/2019 
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jovonny's Magic Square Checker</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+    var total = 0;
+    var magicSquare = [[], [], []];
+    
+    
+    function inputValues(){
+        var x = document.getElementById("magic");
+        var inputNum;
+        var h = 0;
+        for(var i = 0; i < 3; i++){
+            for(var j = 0; j < 3; j++){
+                inputNum = x.elements[h].value;
+                magicSquare[i][j] = parseInt(inputNum);
+                h++;
+            }
+        }
+    }
+
+    function getTargetSelection(int1, int2, int3, targetNum){
+        var testNum = int1 + int2 + int3;
+        if(testNum == targetNum){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+
+    function checkMagicSquare(){
+        for(var i = 0; i < 3; i++){
+            total += getTargetSelection(magicSquare[i][0], magicSquare[i][1], magicSquare[i][2], 15);
+        }
+        for(i = 0; i < 3; i++){
+            total += getTargetSelection(magicSquare[0][i], magicSquare[1][i], magicSquare[2][i], 15);
+        }
+        total += getTargetSelection(magicSquare[0][0], magicSquare[1][1], magicSquare[2][2], 15);
+        total += getTargetSelection(magicSquare[2][2], magicSquare[1][1], magicSquare[0][0], 15);
+    }
+    
+    function output() {
+        if(total == 8){
+            document.getElementById("results").innerHTML = "This is a magic square.";
+        }
+        else{
+            document.getElementById("results").innerHTML = "This is not a magic square.";
+        }
+    }
+    
+    function getResults() {
+        inputValues();
+        checkMagicSquare();
+        output();
+    }    
+    </script>
+
+</head>
+
+<body>
+<header><h1>Jovonny's Magic Square Checker</h1></header>
+<h2>Enter the square</h2>
+
+In this program, you will the enter the nine values to check to see if this is a 3x3 magic square. 
+In a 3x3 magic square, the only values used are 1 to 9, each value can only be used once, 
+and all rows, columns, and diagonals equal to 15.<br><br>
+<form id="magic">
+<table>
+  <tr>
+    <td><input type="text" id="one"></td> <td><input type="text" id="two"></td> <td><input type="text" id="three"></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="four"></td> <td><input type="text" id="five"></td> <td><input type="text" id="six"></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="seven"></td> <td><input type="text" id="eight"></td> <td><input type="text" id="nine"></td>
+  </tr>
+</table><br>
+</form>
+
+<input id="magicButton" type="button" value="Report results" onclick="getResults();"><br><br>
+
+<div id="results">(empty)</div>
+
+<footer><p>&copy; 2019 Jovonny Hailey</p></footer>
+
+</body>
+
+</html>

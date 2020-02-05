@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Jovonny's Olympic Judging Calculator</title>
+	<link rel="stylesheet" href="style.css">
+  
+  <script>
+    var i;
+    var judgeScore = [];
+    var avgScore = "<p>";
+    
+    function input() {
+        var x = document.getElementById("sequenceForm");
+        var inputNum;
+        
+        for (i = 0; i < 8; i++){
+            inputNum = x.elements[i].value;
+            judgeScore[i] = parseFloat(inputNum);
+        }
+    
+    }
+    
+    function minMaxAndAverage() {
+        var avgNum = 0;
+        var lowest = judgeScore[0];
+        var highest = judgeScore[0];
+        
+        for (i = 0; i < 8; i++){
+            if(judgeScore[i] < judgeScore[i + 1] && judgeScore[i] < lowest){
+                lowest = judgeScore[i];
+            }
+        }		
+        if(judgeScore[7] < lowest){
+            lowest = judgeScore[7];
+        }
+        
+        for (i = 0; i < 8; i++){
+            if(judgeScore[i] > judgeScore[i + 1] && judgeScore[i] > highest){
+                highest = judgeScore[i];
+            }
+        }
+        if(judgeScore[7] > highest){
+            highest = judgeScore[7];
+        }
+        
+        for (i = 0; i < 8; i++){
+            avgNum += judgeScore[i];
+        }
+        avgNum = ((avgNum - lowest - highest)/6.0);
+        avgScore += "The judges' average score is " + avgNum.toFixed(2) + ".</p>";
+        
+    }
+    
+    function output() {
+        document.getElementById("output").innerHTML = avgScore;
+    }
+    
+    function finalResults() {
+        input();
+        minMaxAndAverage();
+        output();
+    }
+    
+  </script>
+</head>
+
+<body>
+  <header><h1>Jovonny's Olympic Judging Calculator</h1></header>
+  
+  <form id="sequenceForm">
+    <table>
+    <tr>
+      <td>Country A Judge:</td> <td><input type="text" name ="Country A Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country B Judge:</td> <td><input type="text" name ="Country B Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country C Judge:</td> <td><input type="text" name ="Country C Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country D Judge:</td> <td><input type="text" name ="Country D Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country E Judge:</td> <td><input type="text" name ="Country E Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country F Judge:</td> <td><input type="text" name ="Country F Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country G Judge:</td> <td><input type="text" name ="Country G Judge" value=""></td>
+    </tr>
+    <tr>
+      <td>Country H Judge:</td> <td><input type="text" name ="Country H Judge" value=""></td>
+    </tr>
+    </table><br><br>
+    
+		<input id="submitButton" type="button" value="Compute Score" onclick="finalResults();">
+    
+</form>
+
+<div id="output">(no information)</div>
+<footer>&copy; 2019 Jovonny Hailey</footer>
+
+</body>
+
+</html>

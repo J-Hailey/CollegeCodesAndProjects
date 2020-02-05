@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Jovonny Hailey
+     CSCI 3300
+     11/30/2019 
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jovonny's Rectangle Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    table, td, th {
+      border: 1px solid black;
+    }
+    
+    td {
+      padding: 10px;  
+    }
+  </style>
+
+    <script>
+    
+    function areaOfRectangle() {
+        var height = document.getElementById("height").value;
+        var width = document.getElementById("width").value;
+        
+        var area = parseFloat(height) * parseFloat(width);
+        
+        return area;
+    }
+
+    function perimeterOfRect() {
+        var height = document.getElementById("height").value;
+        var width = document.getElementById("width").value;
+        
+        var perimeter = 2 * (parseFloat(height) + parseFloat(width));
+        
+        return perimeter;
+    }
+
+    function cornerDistances() {
+        var height = document.getElementById("height").value;
+        var width = document.getElementById("width").value;
+        
+        var heightSq = Math.pow(parseFloat(height), 2);
+        var widthSq = Math.pow(parseFloat(width), 2);
+        var sum = heightSq + widthSq;
+        
+        var distance = Math.sqrt(sum); 
+        distance = distance.toFixed(2);
+        
+        return distance;
+    }
+    
+    function getResults() {
+        
+        var results = "The area of this rectangle is " + areaOfRectangle() + " units squared, " 
+        + "the perimeter is " + perimeterOfRect() + " units, and the distance between opposite " + 
+        "corners is " + cornerDistances() + " units."; 
+
+        document.getElementById("results").innerHTML = results;
+    }    
+
+    </script>
+
+</head>
+
+<body>
+<header><h1>Jovonny's Rectangle Calculator</h1></header>
+
+This program will report information about a rectangle.<br><br>
+
+<table>
+  <tr>
+    <td>Height:</td> <td><input type="text" id="height"></td>
+  </tr>
+  <tr>
+    <td>Width:</td> <td><input type="text" id="width"></td>
+  </tr>
+</table><br>
+
+<form action="javascript:getResults()">
+    <input type="submit" value="Report Details"><br><br>
+</form>
+
+<div id="results">(empty)</div>
+
+<footer><p>&copy; 2019 Jovonny Hailey</p></footer>
+
+</body>
+
+</html>
