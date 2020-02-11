@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Jovonny Hailey
+CSCI 3300
+9/30/2019
+QUESTION 2
+-->
+<html lang="en">
+
+<head>
+	<!--This is the head-->
+	<meta charset="utf-8">
+	<title>Jovonny's City and Country App</title>
+	<link rel="stylesheet" href="style.css">
+  
+  <script>
+	<!--Prompts the user to enter their movie--> 
+	function enterCity() {
+		var cityStr = prompt("What is the name of your favorite city?");
+		document.getElementById("city").innerHTML = cityStr;
+	}
+	
+	function enterCountry() {
+		var countryStr = prompt("What is the name of your favorite country?");
+		document.getElementById("country").innerHTML = countryStr;
+	}
+  </script>
+</head>
+
+<body>
+<header>
+<h1>Jovonny's City and Country App</h1>
+</header>
+<div id="button">
+    <input type="submit" value="Enter your favorite city." onclick="enterCity()">
+    <input type="submit" value="Enter your favorite country." onclick="enterCountry()">
+</div>
+<p>Your favorite city is <span id="city">(incomplete information)</span></p>
+<p>Your favorite country is <span id="country">(incomplete information)</span></p>
+
+<footer><h3>&copy; Jovonny Hailey 2019</h3></footer>
+</body>
+</html>

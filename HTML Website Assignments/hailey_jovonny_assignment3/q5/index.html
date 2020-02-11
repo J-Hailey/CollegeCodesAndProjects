@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Jovonny Hailey
+CSCI 3300
+9/30/2019
+-->
+<html lang="en">
+
+<head>
+<!--This is the head-->
+<meta charset="utf-8">
+<title>Jovonny's Teenage Check App</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  var ageRange;
+	function isTeenager() {
+		ageRange = prompt("What is your age?");
+
+    if (ageRange >= 13 && ageRange <= 19) {
+        ageRange = document.getElementById("enter").innerHTML = "This is the age of a teenager.";
+    }
+    else {
+        ageRange = document.getElementById("enter").innerHTML = "This is not a teenager.";
+    }
+   
+	}
+  function notTeenager() {
+    ageRange = prompt("What is your age?");
+
+    if (ageRange < 13 || ageRange > 19) {
+        ageRange = document.getElementById("enter").innerHTML = "This is not the age of a teenager.";
+    }
+    else {
+        ageRange = document.getElementById("enter").innerHTML = "This is a teenager.";
+    }
+  }
+</script>
+</head>
+<body>
+<header><h1>Jovonny's Teenage Check App</h1></header>
+
+<div id="button">
+<input type="submit" value="Check to see if age is a teenager." onclick="isTeenager()">
+<input type="submit" value="Check to see if range is not teenager." onclick="notTeenager()">
+</div>
+<p><span id="enter">(incomplete information)</span></p>
+
+
+<footer> 
+<h3>&copy; Jovonny Hailey 2019</h3>
+</footer>
+</body> 
+</html>

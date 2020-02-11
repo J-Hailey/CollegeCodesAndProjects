@@ -1,0 +1,18 @@
+/* Hello! */
+/*Layout of all paragraphs*/
+p {
+  font-family: Georgia;
+  border: 3px solid Black;
+  padding: 30px;
+}
+
+/*Listed Elements*/
+li {
+	font-size: 125%; 
+	font-family: Georgia;
+}
+
+/*Listed Elements into a link*/
+li>a {
+	color: pink;
+}

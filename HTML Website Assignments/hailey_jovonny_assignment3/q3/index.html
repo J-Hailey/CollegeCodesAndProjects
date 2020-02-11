@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Jovonny Hailey
+CSCI 3300
+9/30/2019
+QUESTION 3
+-->
+<html lang="en">
+
+<head>
+	<!--This is the head-->
+	<meta charset="utf-8">
+	<title>Jovonny's Username Generator App</title>
+	<link rel="stylesheet" href="style.css">
+  
+  <script>
+	<!--Prompts the user to enter their movie--> 
+	function enterUser() {
+		var firstName = prompt("What is your first name?");
+		var lastName = prompt("What is your last name?");
+		var favNum = prompt("What is your favorite number?");
+		var userStr = lastName.toLowerCase() + "" + firstName.charAt(0).toLowerCase() + "" + favNum;
+		document.getElementById("user").innerHTML = userStr;
+	}
+</script>
+</head>
+
+<body>
+<header>
+<h1>Jovonny's Username Generator App</h1>
+</header>
+
+<div id="button">
+<input type="submit" value="Enter your user information." onclick="enterUser()">
+</div>
+<p>Your username is <span id="user">(incomplete information)</span></p>
+
+
+<footer><h3>&copy; Jovonny Hailey 2019</h3></footer>
+</body>
+</html>

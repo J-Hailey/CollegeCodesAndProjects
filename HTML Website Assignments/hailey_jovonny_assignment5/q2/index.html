@@ -1,0 +1,57 @@
+<!--Jovonny Hailey
+	CSCI 3300
+	10/28/2019-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Jovonny's Shopping List</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<script>
+		function doSomething() {
+			var results = "";
+			var currentItem = "";
+			var currentPrice = "";
+			var list = {};
+			var count = 0;
+			var numOfItems = prompt("How many items are on your list?");
+			while(count < numOfItems) {
+				list[count] = {
+
+				currentItem : prompt("What's the name of the item?"), 
+				currentPrice : prompt("What's the price of the item?")
+
+				}
+				results += list[count].currentItem + " " + parseFloat(list[count].currentPrice).toFixed(2) + "<br>";
+				
+				count++; 
+			}
+			
+			
+			document.getElementById("display").innerHTML = results;
+		}
+	</script>
+</head>
+
+<body>
+<header><br>
+<h1>Jovonny's Shopping List</h1>
+</header><br><br>
+
+<form action="javascript:doSomething()">
+	<input type="submit" value="Show my list"><br><br>
+</form>
+
+<div id="display"><p>(incomplete)</p></div>
+
+<footer>
+<h3>&copy; 2019 Jovonny Hailey</h3> 
+</footer>
+</body>
+
+
+
+</html>

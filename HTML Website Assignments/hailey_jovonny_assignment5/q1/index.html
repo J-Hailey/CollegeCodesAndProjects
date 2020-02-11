@@ -1,0 +1,45 @@
+<!--Jovonny Hailey
+	CSCI 3300
+	10/28/2019-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Jovonny's Secret Message App</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<script>
+		function dowhile() {
+			var message = '<h1>Cats are amazing!</h1><div><img src="phonecat.jpg" alt="Phone Kitty"></div>';
+			var message_string = "";
+			do {
+				message_string = prompt("Enter the secret word: ");
+			}while(message_string != "cat"); // Type 'cat'. It's the password.
+			document.getElementById("secret").innerHTML = "<div id=text>" + message + "</div>";
+		}
+	</script>
+</head>
+
+
+
+<body>
+<header><br>
+<h1>Jovonny's Secret Message Application</h1>
+</header>
+<br>
+
+<form action="javascript:dowhile()">
+	<input type="submit" value="Click here to view secret message..">
+</form>
+<br>
+<div id="secret"><p>(incomplete)</p></div>
+
+<footer>
+<h3>&copy; 2019 Jovonny Hailey</h3> 
+</footer>
+</body>
+
+
+
+</html>

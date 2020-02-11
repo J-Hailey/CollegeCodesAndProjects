@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Jovonny Hailey
+CSCI 3300
+9/30/2019
+QUESTION 4
+-->
+<html lang="en">
+
+<head>
+	<!--This is the head-->
+	<meta charset="utf-8">
+	<title>Jovonny's County Fair Ticket App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Jovonny's County Fair Ticket App</h1>
+<script>
+	<!--Prompts the user to enter their movie--> 
+	function enter() {
+		var age = prompt("What is your age?");
+    if (age < 0) {
+        age = document.getElementById("enter").innerHTML = "You can't have a negative age!";
+    }
+    else if (age == 0) {
+        age = document.getElementById("enter").innerHTML = "The user is an infant under the age of 1. Tickets are free!";
+    }
+    else if (age < 9) {
+        age = document.getElementById("enter").innerHTML = "The tickets are free at this age!";
+    }
+    else if (age == 9 || age < 18) {
+        age = document.getElementById("enter").innerHTML = "The tickets are $10!";
+    }
+    else {
+        age = document.getElementById("enter").innerHTML = "Tickets are $15!";
+    }
+	}
+</script>
+</header>
+
+
+<p>Thank you for coming to the county fair! Here are the ticket prices:\n\n</p>
+
+
+<ul>
+<li>Under 9 is free!</li>
+<li>Ages 9 to 17 is $10.</li>
+<li>All adults are $15.</li>
+</ul>
+<div id="button">
+<input type="submit" value="Enter your age." onclick="enter()">
+</div>
+<p><span id="enter">(incomplete information)</span></p>
+
+<footer><h3>&copy; Jovonny Hailey 2019</h3></footer>
+</body>
+</html>

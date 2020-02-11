@@ -1,0 +1,61 @@
+/*
+Jovonny Hailey
+CSCI 3300
+Assignment 3
+*/
+html {
+    background-color: #14528C;
+    padding: 20px; 
+}
+
+body {
+    width: 1200px; 
+    border: 2px solid black;
+    font-family: "Arial", Gadget, sans-serif;
+    box-shadow: 5px 10px;
+    background-color: #247DD2;
+    margin: 0; 
+    margin-top: 0px;
+}
+
+header {
+    margin: 0; 
+    margin-top: 0px;
+    background-image: linear-gradient(to right, navy , grey);
+    color: red;
+    text-shadow: 2px 2px black;
+}
+
+footer {
+  color: white; 
+  padding: 10px;
+  clear: both;
+  height: 10%;
+  text-align: center;
+  font-size: 90%;
+  background-image: linear-gradient(to left, navy , grey);
+}
+
+
+h1 {
+    font-size: 400%;
+    margin-top: 0px;
+    padding: 50px;
+}
+
+p {
+    padding-left: 10px;
+}
+
+#button input[type="submit"], input[type="reset"]{
+  background-color: CornflowerBlue;
+  border: 1px solid blue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 300px;
+  display: block;
+}

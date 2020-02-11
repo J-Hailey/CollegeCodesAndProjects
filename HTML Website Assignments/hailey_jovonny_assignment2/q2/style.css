@@ -1,0 +1,67 @@
+/*
+Jovonny Hailey
+CSCI 3300
+Assignment 2
+*/
+
+body {
+    font-family: "Arial", Gadget, sans-serif;
+}
+
+#header {
+    color: red;
+    text-shadow: 2px 2px black;
+}
+
+#section {
+  float: left;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  font-size: 90%;
+}
+
+a:link { /*Unvisited Links*/
+  color: red; 
+  font-weight: bold;
+}
+
+a:visited {/*Visited Links*/
+  color: red; 
+  font-weight: bold;
+}
+/* First letter size increase as a class */
+#first-letter1 {
+  font-size: 300%;
+}
+
+#first-letter2 {
+  font-size: 300%;
+}
+
+/*Objects floating left with a class*/
+#left {
+  float: left;
+}
+
+#header {
+    color: red;
+    text-shadow: 2px 2px black;
+}
+
+#section {
+  float: left;
+}
+
+  

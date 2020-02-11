@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jovonny Hailey's Chemical Percentage</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+    
+    
+    
+    function finalOutput() {
+          var small = document.getElementById("smaller").value;
+          var smallFloat = parseFloat(small);
+          var middle = document.getElementById("mid").value;
+          var middleFloat = parseFloat(middle);
+          var large = document.getElementById("larger").value;
+          var largeFloat = parseFloat(large);
+
+          function higherRelativeToAverage() {
+              var higher_relative_difference = (largeFloat 
+              - middleFloat) / middleFloat;
+              var higher_average = (largeFloat + middleFloat) / 2;
+      
+              if (higher_relative_difference <= 0.2) {
+                document.getElementById("final").innerHTML = 
+                "This test was succcessful and the average "+
+                "for this test is "+ higher_average;
+              }
+              else {
+                document.getElementById("final").innerHTML = 
+                "This test was unsucccessful";
+              }
+          }
+      
+        function lowerRelativeToAverage() {
+            var lower_relative_difference = (middleFloat
+            - smallFloat) / smallFloat;
+            var lower_average = (middleFloat + smallFloat) / 2;
+      
+            if (lower_relative_difference <= 0.2) {
+              document.getElementById("final").innerHTML = 
+              "This test was succcessful and the average "+
+              "for this test is "+ lower_average;
+            }
+            else {
+              document.getElementById("final").innerHTML = 
+              "This test was unsucccessful";
+            }
+        }
+    }
+    
+    </script>
+</head>
+
+<header>
+<h1>Jovonny Hailey's Chemical Percentage</h1>
+</header>
+
+
+<body>
+Smallest Run Percentage: <input type="text" id="smaller">
+<br><br>
+Middle Run Percentage: <input type="text" id="mid">
+<br><br>
+Largest Run Percentage: <input type="text" id="larger">
+<br><br>
+
+<input type="button" value="Click here to text the three runs." 
+onclick="finalOutput()">
+<br><br>
+
+<div id="final">(incomplete statement)</div>
+</body>
+
+
+<footer>
+<h3>&copy; 2019 Jovonny Hailey<h3>
+</footer>
+
+</html>
+
+

@@ -1,0 +1,10 @@
+1 .. 9 = 45; 45 / 3 = 15; each column and row gives me a sum of 15 (diagonals included) for eight calculations in total;
+
+2 7 6
+9 5 1
+4 3 8
+
+checkval(a b c total)
+var list = [(fill this up)]
+
+***sum - max - min / 6***

@@ -1,0 +1,13 @@
+5.6 [small], 6.1 [middle], 15.3 [large]
+
+relative difference: [6.1 - 5.6] = 0.09, [15.3 - 6.1] = 1.51
+average: [(6.1 + 5.6)/2] = 5.85, [(6.1 + 15.3)/2] = 10.7
+
+smaller relative is 0.09 (is this less than or equal to 0.2 = YES!)
+if yes, display the correct average as 5.85
+if no, display the correct average as 10.7
+
+How to calculate the lower relative difference?
+
+~ var lower relative difference = (middle - small) / small;
+~ var lower average = (middle + small) / 2;

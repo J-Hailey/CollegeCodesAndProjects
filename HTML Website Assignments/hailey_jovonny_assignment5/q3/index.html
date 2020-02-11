@@ -1,0 +1,80 @@
+<!--Jovonny Hailey
+	CSCI 3300
+	10/28/2019-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Jovonny's Sequence Generator</title>
+	
+	<style>
+    table {
+      border-collapse: collapse;
+      width: 70%
+    }
+
+    table, td, th {
+      border: 1px solid black;
+    }
+    
+    td {
+      padding: 15px;  
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+	<script>
+		function forLoop() {
+			// connect variables to ids
+			var start = document.getElementById("begin").value;
+			var stop = document.getElementById("end").value;
+			var step = document.getElementById("skip").value;
+			var message = "<ul>";
+			
+			// basically a range function in python
+      
+			for (var i = start; i <= stop; i++) { 
+          if (i % step == 0){
+            message += "<li>" + i + "</li>";
+          }
+			}
+      
+			// end list, and display it
+			message += "</ul>";
+			document.getElementById("calculate").innerHTML = message;
+		}
+	</script>
+</head>
+
+<body>
+<div id="header">
+<header><br>
+<h1>Jovonny's Sequence Generator</h1>
+</header>
+</div>
+
+<h2><span id="first-letter">E</span>nter the first, last, and the step size for this sequence.</h2>
+<table>
+  <tr>
+    <td>Starting Value:</td> <td><input type="text" id="begin"></td>
+  </tr>
+  <tr>
+    <td>Ending Value:</td> <td><input type="text" id="end"></td>
+  </tr>
+  <tr>
+    <td>Skip:</td> <td><input type="text" id="skip"></td>
+  </tr>
+</table> <br>
+	<input type="button" value="Click here to produce the list." onclick="forLoop()"> <br><br>
+
+<div id="calculate">(incomplete)</div>
+
+<footer>
+<h3>&copy; 2019 Jovonny Hailey</h3> 
+</footer>
+</body>
+
+
+
+</html>

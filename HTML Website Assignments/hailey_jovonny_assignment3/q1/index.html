@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Jovonny Hailey
+CSCI 3300
+9/30/2019
+QUESTION 1
+-->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Jovonny's Movie App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+<h1>Jovonny's Movie App</h1>
+<script>
+	<!--Prompts the user to enter their movie, director, lead actor, and genre--> 
+	function enterMovie() {
+		var movieStr = prompt("What is the name of your favorite movie?");
+		var directStr = prompt("Who was the director?");
+		var actorStr = prompt("Who was the lead actor?");
+		var genreStr = prompt("What was the genre?");
+		
+		document.getElementById("movie").innerHTML = movieStr;
+		document.getElementById("director").innerHTML = directStr;
+		document.getElementById("actor").innerHTML = actorStr;
+		document.getElementById("genre").innerHTML = genreStr;
+	}
+</script>
+</header>
+
+<div id="button">
+<input type="submit" value="Enter your favorite movie." onclick="enterMovie()">
+</div>
+
+<p>Your favorite movie is <span id="movie">(incomplete information)</span></p>
+<p>The movie's director is <span id="director">(incomplete information)</span></p>
+<p>The movie's lead actor is <span id="actor">(incomplete information)</span></p>
+<p>The movie's genre is <span id="genre">(incomplete information)</span></p>
+
+<footer><h3>&copy; Jovonny Hailey 2019</h3></footer>
+</body>
+
+</html>

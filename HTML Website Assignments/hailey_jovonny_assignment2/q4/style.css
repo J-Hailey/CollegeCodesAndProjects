@@ -1,0 +1,94 @@
+/*
+Jovonny Hailey
+CSCI 3300
+Assignment 2
+*/
+
+#header {
+    margin: 0px;
+    background-image: linear-gradient(to right, navy , grey);
+    color: red;
+    text-shadow: 2px 2px black;
+}
+
+#section {
+    float: right; 
+    width: 900px; 
+}
+
+#aside {
+    float: left; 
+    width: 250px;
+}
+
+#footer {
+  color: white; 
+  padding: 10px;
+  clear: both;
+  height: 10%;
+  text-align: center;
+  font-size: 90%;
+  background-image: linear-gradient(to left, navy , grey);
+}
+
+
+/* First letter size increases h1 as a class */
+#first-letter1 {
+  font-size: 300%;
+}
+/* First letter size increases h2 as a class */
+#first-letter2 {
+  font-size: 300%;
+}
+
+/*Objects floating left with a class*/
+#image {
+    margin-left: 10px; 
+    float: left;
+}
+
+#name {
+
+}
+html {
+    background-color: #14528C;
+    padding: 20px; 
+}
+
+header {
+    margin: 0px;
+}
+
+body {
+    width: 1200px; 
+    border: 2px solid black;
+    font-family: "Arial", Gadget, sans-serif;
+    box-shadow: 5px 10px;
+    background-color: #247DD2;
+    margin: auto; 
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+p {
+    padding-left: 10px;
+}
+
+a:link { /*Unvisited Links*/
+  color: red; 
+  font-weight: bold;
+}
+
+a:visited {/*Visited Links*/
+  color: red; 
+  font-weight: bold;
+}
+
+
+  
